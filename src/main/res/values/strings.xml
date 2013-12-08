@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Proxy Now!</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="no_settings">No phrases configured yet, go ahead and add one!</string>
+    <string name="label_add">Add phrase</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="fill_in_regexp">Please fill in a Regular Expression</string>
+    <string name="fill_in_task_name">Please select a task</string>
+    <string name="phrase">Phrase to recognize</string>
+    <string name="example_phrase">turn( the)? lights on</string>
+    <string name="task_name">Task Name</string>
+    <string name="example_task_name">Turn the lights on</string>
+    <string name="invalid_regexp">The phrase is not a valid Regular Expression</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="only_on_voice_preference_summary">This prevents typed searches from triggering actions</string>
+    <string name="only_on_voice_preference_title">Only react to voice searches</string>
+
+</resources>

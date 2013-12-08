@@ -1,0 +1,10 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="only_on_voice"
+        android:title="@string/only_on_voice_preference_title"
+        android:summary="@string/only_on_voice_preference_summary"
+        android:defaultValue="true"
+        />
+
+</PreferenceScreen>
