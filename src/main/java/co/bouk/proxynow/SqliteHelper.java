@@ -15,7 +15,6 @@ public class SqliteHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         Setting.createTable(db);
-        db.execSQL("INSERT INTO settings (regexp, task_name) VALUES (\"turn the lights on|turn on the lights\", \"Turn the lights on\");");
     }
 
     @Override
