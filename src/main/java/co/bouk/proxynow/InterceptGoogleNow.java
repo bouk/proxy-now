@@ -8,6 +8,7 @@ import static de.robv.android.xposed.XposedHelpers.*;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
 
 public class InterceptGoogleNow implements IXposedHookLoadPackage {
@@ -16,7 +17,7 @@ public class InterceptGoogleNow implements IXposedHookLoadPackage {
         if(!lpparam.packageName.equals("com.google.android.googlequicksearchbox")) {
             return;
         }
-
+        XposedBridge.log("Hooking into Google Now");
         Class<?> Event = findClass("com.google.android.search.core.state.VelvetEventBus.Event", lpparam.classLoader);
         findAndHookMethod("com.google.android.velvet.presenter.VelvetPresenter", lpparam.classLoader, "onStateChanged", Event, new XC_MethodHook() {
             @Override
@@ -28,6 +29,7 @@ public class InterceptGoogleNow implements IXposedHookLoadPackage {
                         Object query = callMethod(queryState, "takeNewlyCommittedWebQuery");
                         if (query != null) {
                             String queryString = (String)callMethod(query, "getQueryString");
+                            XposedBridge.log("Found query: " + queryString);
                             queryStringReceived(context, queryString, (Boolean)callMethod(query, "isVoiceSearch"));
                         }
                     }

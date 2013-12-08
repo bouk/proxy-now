@@ -84,6 +84,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform (10)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="XposedBridgeApi-2.1 (4)" level="project" />
   </component>
 </module>
 
